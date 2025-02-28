@@ -1,0 +1,75 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[
+{"Solicitar"," ","al"," ","usuario"," ","que"," ","ingrese"," ","un"," ","n\[UAcute]mero"}]," ","*)"}],"\n","n"}]," ","="," ",RowBox[
+{"Input","[","\"Por favor, ingresa un n\[UAcute]mero:\"","]"}]}],";"}],"\n",RowBox[
+{RowBox[{RowBox[{"(*"," ",RowBox[{"Verificar"," ","que"," ","la"," ","entrada"," ","sea"," ","un"," ","n\[UAcute]mero"," ","entero"," ","no"," ","negativo"}]," ","*)"}],"\n",RowBox[
+{"If","[",RowBox[{RowBox[{RowBox[{"IntegerQ","[","n","]"}]," ","&&"," ",RowBox[{"n"," ","\[GreaterEqual]"," ","0"}]}],",","\n","  ",RowBox[
+{"(*"," ",RowBox[{"Calcular"," ","el"," ","factorial"}]," ","*)"}],"\n","  ",RowBox[
+{RowBox[{"factorial"," ","="," ",RowBox[{"Factorial","[","n","]"}]}],";","\n","  ",RowBox[
+{"(*"," ",RowBox[{"Mostrar"," ","el"," ","resultado"}]," ","*)"}],"\n","  ",RowBox[
+{"Print","[",RowBox[{"\"El factorial de \"",","," ","n",","," ","\" es: \"",","," ","factorial"}],"]"}]}],",","\n","  ",RowBox[
+{"(*"," ",RowBox[{RowBox[{"Si"," ","la"," ","entrada"," ","no"," ","es"," ","v\[AAcute]lida"}],","," ",RowBox[
+{"mostrar"," ","un"," ","mensaje"," ","de"," ","error"}]}]," ","*)"}],"\n","  ",RowBox[
+{"Print","[","\"Por favor, ingresa un n\[UAcute]mero entero no negativo.\"","]"}]}],"\n","]"}]}],"\n"}]}],
+"Input",ExpressionUUID -> "32a9d92d-974a-45a2-ad62-5f0f9b4fd1db"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"El factorial de \"","\[InvisibleSpace]","4","\[InvisibleSpace]","\" es: \"","\[InvisibleSpace]","24"}],
+SequenceForm["El factorial de ",4," es: ",24],Editable -> False],StandardForm],"Print",
+ExpressionUUID -> "d9dcf326-2053-4eb9-9f84-416834b04cc7"]},Open],ExpressionUUID -> "83b060cb-e57a-4074-b655-f977c6c78e57"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{"(* Solicitar al usuario que ingrese un n\[UAcute]mero *)\nn = Input[\"Por favor, ingresa un n\[UAcute]mero:\"];"}],"\n\n",RowBox[
+{"(* Verificar que la entrada sea un n\[UAcute]mero entero *)\nIf[IntegerQ[n],\n  (* Comprobar si el n\[UAcute]mero es primo *)\n  If[PrimeQ[n],\n    (* Si es primo, mostrar un mensaje *)\n    Print[n, \" es un n\[UAcute]mero primo.\"],\n    (* Si no es primo, mostrar un mensaje *)\n    Print[n, \" no es un n\[UAcute]mero primo.\"]\n  ],\n  (* Si la entrada no es un n\[UAcute]mero entero, mostrar un mensaje de error *)\n  Print[\"Por favor, ingresa un n\[UAcute]mero entero.\"]\n]\n"}]}],
+"Input",CellLabel -> "In[10]:= ",ExpressionUUID -> "b1c36968-e0bf-4a11-9c6b-5c212297fd4c"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"5","\[InvisibleSpace]","\" es un n\[UAcute]mero primo.\""}],
+SequenceForm[5," es un n\[UAcute]mero primo."],Editable -> False],StandardForm],"Print",
+ExpressionUUID -> "46b7bf69-2b8d-4c29-b975-038588cd0a5e"]},Open],ExpressionUUID -> "85a7b926-62cf-4424-b585-6fdaa6259e57"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{"(* Solicitar al usuario que ingrese el primer n\[UAcute]mero *)\na = Input[\"Por favor, ingresa el primer n\[UAcute]mero:\"];"}],"\n\n",RowBox[
+{"(* Solicitar al usuario que ingrese el segundo n\[UAcute]mero *)\nb = Input[\"Por favor, ingresa el segundo n\[UAcute]mero:\"];"}],"\n\n",RowBox[
+{"(* Verificar que ambas entradas sean n\[UAcute]meros enteros no negativos *)\nIf[IntegerQ[a] && a \[GreaterEqual] 0 && IntegerQ[b] && b \[GreaterEqual] 0,\n  (* Calcular el MCD utilizando el algoritmo de Euclides *)\n  mcd = GCD[a, b];\n  (* Mostrar el resultado *)\n  Print[\"El m\[AAcute]ximo com\[UAcute]n divisor de \", a, \" y \", b, \" es: \", mcd],\n  (* Si alguna entrada no es v\[AAcute]lida, mostrar un mensaje de error *)\n  Print[\"Por favor, ingresa dos n\[UAcute]meros enteros no negativos.\"]\n]\n"}]}],
+"Input",CellLabel -> "In[42]:= ",ExpressionUUID -> "bacfa9e6-ee27-4b13-8a5c-82311c4381e7"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"El m\[AAcute]ximo com\[UAcute]n divisor de \"","\[InvisibleSpace]","1","\[InvisibleSpace]","\" y \"","\[InvisibleSpace]","4","\[InvisibleSpace]","\" es: \"","\[InvisibleSpace]","1"}],
+SequenceForm["El m\[AAcute]ximo com\[UAcute]n divisor de ",1," y ",4," es: ",1],Editable -> False],
+StandardForm],"Print",ExpressionUUID -> "61fa686c-996d-4ca4-b8f1-e0cae60d5070"]},
+Open],ExpressionUUID -> "c310fab7-de73-4bde-903d-ce5a7a0fac69"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{"Solicitar"," ","al"," ","usuario"," ","que"," ","ingrese"," ","el"," ","primer"," ","n\[UAcute]mero"," ",RowBox[
+{"(","a",")"}]}]," ","*)"}],"\n","a"}]," ","="," ",RowBox[{"ToExpression","[",RowBox[
+{"InputString","[","\"Por favor, ingresa el primer n\[UAcute]mero (a):\"","]"}],"]"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{"Solicitar"," ","al"," ","usuario"," ","que"," ","ingrese"," ","el"," ","segundo"," ","n\[UAcute]mero"," ",RowBox[
+{"(","b",")"}]}]," ","*)"}],"\n","b"}]," ","="," ",RowBox[{"ToExpression","[",RowBox[
+{"InputString","[","\"Por favor, ingresa el segundo n\[UAcute]mero (b):\"","]"}],"]"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{"Solicitar"," ","al"," ","usuario"," ","que"," ","ingrese"," ","la"," ","tolerancia"}]," ","*)"}],"\n","tolerancia"}]," ","="," ",RowBox[
+{"ToExpression","[",RowBox[{"InputString","[","\"Por favor, ingresa la tolerancia deseada:\"","]"}],"]"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{"Definir"," ","la"," ","funci\[OAcute]n"," ","f",RowBox[
+{"(","x",")"}]}]," ","*)"}],"\n",RowBox[{"f","[","x_","]"}]}]," ",":="," ",RowBox[
+{RowBox[{"x","^","2"}]," ","-"," ","2"}]}],RowBox[{"\n","\n"}],RowBox[{RowBox[{RowBox[
+{RowBox[{"(*"," ",RowBox[{"Calcular"," ","la"," ","ra\[IAcute]z"," ","utilizando"," ","FindRoot"}]," ","*)"}],"\n","raiz"}]," ","="," ",RowBox[
+{"FindRoot","[",RowBox[{RowBox[{RowBox[{"f","[","x","]"}]," ","=="," ","0"}],","," ",RowBox[
+{"{",RowBox[{"x",","," ","a",","," ","b"}],"}"}]}],"]"}]}],";"}],RowBox[{"\n","\n"}],RowBox[
+{RowBox[{RowBox[{"(*"," ",RowBox[{"Mostrar"," ","el"," ","resultado"}]," ","*)"}],"\n",RowBox[
+{"Print","[",RowBox[{"\"La ra\[IAcute]z aproximada es: \"",","," ","raiz"}],"]"}]}],"\n","\n"}]}],
+"Input",CellLabel -> "In[66]:= ",ExpressionUUID -> "bd2b3a1b-46ce-405c-b80c-5d1409ff23e6"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"La ra\[IAcute]z aproximada es: \"","\[InvisibleSpace]",RowBox[
+{"{",RowBox[{"x","\[Rule]","1.4142135623730951`"}],"}"}]}],SequenceForm["La ra\[IAcute]z aproximada es: ",
+{x -> 1.4142135623730951`}],Editable -> False],StandardForm],"Print",ExpressionUUID -> "52e9f29b-aa6e-4bf7-96c8-464cc617165d"]},
+Open],ExpressionUUID -> "6c15cf96-332d-41cb-a808-e333cd1bd744"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{"(* Solicitar al usuario que ingrese la funci\[OAcute]n f(x) *)\nf[x_] := ToExpression[InputString[\"Por favor, ingresa la funci\[OAcute]n f(x):\"]];"}],"\n\n",RowBox[
+{"(* Solicitar al usuario que ingrese el punto de expansi\[OAcute]n x0 *)\nx0 = ToExpression[InputString[\"Por favor, ingresa el punto de expansi\[OAcute]n x0:\"]];"}],"\n\n",RowBox[
+{"(* Solicitar al usuario que ingrese el orden n *)\nn = ToExpression[InputString[\"Por favor, ingresa el orden n:\"]];"}],"\n\n",RowBox[
+{"(* Calcular el polinomio de Taylor de orden n en torno a x0 *)\npolinomio = Normal[Series[f[x], {x, x0, n}]];"}],"\n\n",RowBox[
+{"(* Mostrar el polinomio de Taylor *)\npolinomio\n"}]}],"Input",CellLabel -> "In[72]:= ",
+ExpressionUUID -> "2a5a003a-191b-44bb-ac82-7d77213b3e31"],Cell[
+BoxData["4",StandardForm],
+"Output",CellLabel -> "Out[76]= ",ExpressionUUID -> "601a6ab8-6f16-4169-afb1-8e7c87cc7fe3"]},
+Open],ExpressionUUID -> "0ae9c78b-a5e8-45c5-9cb6-7dfece2f033b"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "14.2 for Wolfram Cloud 1.70.1 (December 30, 2024)"]
